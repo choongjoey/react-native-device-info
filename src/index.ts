@@ -409,7 +409,7 @@ export const [hasHms, hasHmsSync] = getSupportedPlatformInfoFunctions({
   supportedPlatforms: ['android'],
   getter: () => RNDeviceInfo.hasHms(),
   syncGetter: () => RNDeviceInfo.hasHmsSync(),
-  defaultValue: false,
+  defaultValue: -1,
 });
 
 export const [getFirstInstallTime, getFirstInstallTimeSync] = getSupportedPlatformInfoFunctions({
