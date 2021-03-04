@@ -120,8 +120,8 @@ interface ExposedNativeMethods {
   getUserAgentSync: () => string;
   hasGms: () => Promise<boolean>;
   hasGmsSync: () => boolean;
-  hasHms: () => Promise<boolean>;
-  hasHmsSync: () => boolean;
+  hasHms: () => Promise<number>;
+  hasHmsSync: () => number;
   hasSystemFeature: (feature: string) => Promise<boolean>;
   hasSystemFeatureSync: (feature: string) => boolean;
   isAirplaneMode: () => Promise<boolean>;
