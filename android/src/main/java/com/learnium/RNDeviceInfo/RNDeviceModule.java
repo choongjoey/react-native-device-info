@@ -523,7 +523,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
       Object hmsObject = getInstanceMethod.invoke(null);
       Method isHuaweiMobileServicesAvailableMethod = hmsObject.getClass().getMethod("isHuaweiMobileServicesAvailable", Context.class);
       int isHMS = (int) isHuaweiMobileServicesAvailableMethod.invoke(hmsObject, getReactApplicationContext());
-      return isHMS == 0; // ConnectionResult.SUCCESS
+      return isHMS == 0 || isHMS == 2; // ConnectionResult.SUCCESS
     } catch (Exception e) {
       return false;
     }
